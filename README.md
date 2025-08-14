@@ -13,6 +13,8 @@ Current AI bias detection methods rely on artificial academic tests that don't r
 - **5,807 Bias Instances Found** in real-world scenarios
 - **6 Cognitive Dimensions** measured for psychological profiling
 
+<img width="829" height="663" alt="image_14_psychology_profiles" src="https://github.com/user-attachments/assets/ce6e082e-d142-4d34-89e5-bb4b7038929a" />
+
 ## 🔬 Methodology
 
 ### Real-World Content Collection
@@ -77,7 +79,7 @@ Our research revealed several critical measurement issues requiring refinement:
 - **Paradox Resolution**: Address inverse bias-psychology relationships
 - **Attribute validation**: Run artificial tests to validate full radar chart can be covered with different scenarios
 - **Expanding sources**: Increase number of topics, models, and items analyzed
-
+  
 ## 🤝 Contributing
 
 We welcome contributions to improve bias detection methodologies:
