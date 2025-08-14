@@ -82,7 +82,8 @@ Our research revealed several critical measurement issues requiring refinement:
 
 We welcome contributions to improve bias detection methodologies:
 
-1. Join the discussion about formulas and cognitive attributes. 
+- [Join the discussion about formulas and cognitive attributes. ](https://github.com/beviah/GENbAIs/wiki/Bias-Cognition-Capabilities-%E2%80%90-Discussion-about-definitions-and-formulas)
+- or start another topic in the wiki
 
 ## 📖 Documentation
 
