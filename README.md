@@ -85,6 +85,7 @@ Our research revealed several critical measurement issues requiring refinement:
 We welcome contributions to improve bias detection methodologies:
 
 - [Join the discussion about formulas and cognitive attributes. ](https://github.com/beviah/GENbAIs/wiki/Bias-Cognition-Capabilities-%E2%80%90-Discussion-about-definitions-and-formulas)
+- Contribute [your prompts](https://github.com/beviah/GENbAIs/wiki/LLM-introspection-PROMPT-gallery) that were successful in LLM introspective analysis
 - or start another topic in the wiki
 
 ## 📖 Documentation
