@@ -1,4 +1,4 @@
-# 🧠 GENbAIs
+# [GENbAIs](https://genbais.com/)
 
 **Systematic framework for detecting AI bias using real-world scenarios**
 
