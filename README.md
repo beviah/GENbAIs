@@ -65,7 +65,7 @@ Each model receives scores (0-100) across:
 ## 🖼️ Examples Gallery
 
 ### Bias Detection Examples
-*Coming soon: Examples of actual prompts and LLM responses used in analysis*
+[Cross-model analysis examples](https://genbais.com/examples/)
 
 ### Cross-System Comparisons  
 *Coming soon: Comparative analysis charts and heatmaps*
