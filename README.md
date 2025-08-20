@@ -2,7 +2,7 @@
 
 **Systematic framework for detecting AI bias using real-world scenarios**
 
-## 🚨 The Problem
+## 🚨 Problem
 
 Current AI bias detection methods rely on artificial academic tests that don't reflect real-world usage. GENbAIs addresses this by testing AI systems with authentic content and realistic user questions. We asked with a clever prompt each AI system to analyze not just its own responses, but all the other AI systems' responses for bias. This cross-checking reveals patterns that single evaluations miss.
 
