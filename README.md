@@ -1,6 +1,6 @@
 # [GENbAIs](https://genbais.com/)
 
-# UPDATE: website [genbais.com](https://genbais.com/) (and this repo as well) has been removed from Google index and will not re-index, apparently they do not like their biases exposed!
+### UPDATE: website [genbais.com](https://genbais.com/) (and this repo as well) has been removed from Google index and will not re-index, apparently they do not like their biases exposed!
 
 **Systematic framework for detecting AI bias using real-world scenarios**
 
