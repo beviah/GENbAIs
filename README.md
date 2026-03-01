@@ -4,7 +4,7 @@
 
 Intelligent search over 50+ neuroscience-inspired mechanisms discovers lightweight adapters that improve foundation models beyond state-of-the-art parameter-efficient fine-tuning. Validated on 20 benchmarks — **17 wins, 3 losses**.
 
-### 🤗 [Model on HuggingFace](https://huggingface.co/lakinekaki/all-MiniLM-L6-v2-genbais) · 🌐 [Website](https://genbais.com) · 📄 [Paper](https://genbais.com/static/genbais_paper.pdf) · 💼 [Services](https://genbais.com/consulting)
+### 🤗 [Model on HuggingFace](https://huggingface.co/lakinekaki/all-MiniLM-L6-v2-genbais) · 🌐 [Website](https://genbais.com) · 📄 [Paper](https://genbais.com/static/genbais_paper.pdf)
 
 ---
 
@@ -123,8 +123,6 @@ GENbAIs bio-adapter enhancement is built on systematic AI bias research. By unde
 - 🤗 [HuggingFace Model](https://huggingface.co/lakinekaki/all-MiniLM-L6-v2-genbais)
 - 🌐 [Website & Benchmarks](https://genbais.com)
 - 📄 [Research Paper](https://genbais.com/static/genbais_paper.pdf)
-- 💼 [Enhancement Services](https://genbais.com/consulting)
-- 📧 [Contact](mailto:lazar.kovacevic@yahoo.com)
 
 ## License
 
