@@ -1,96 +1,143 @@
-# [GENbAIs](https://genbais.com/)
+# [GENbAIs](https://genbais.com/) — Bio-Inspired Adapters That Beat LoRA
 
-### UPDATE: website [genbais.com](https://genbais.com/) (and this repo as well) has been removed from Google index and will not re-index, apparently they do not like their biases exposed!
+**General Efficient Neural bio-Adapter Intelligent Search**
 
-**Systematic framework for detecting AI bias using real-world scenarios**
+Intelligent search over 50+ neuroscience-inspired mechanisms discovers lightweight adapters that improve foundation models beyond state-of-the-art parameter-efficient fine-tuning. Validated on 20 benchmarks — **17 wins, 3 losses**.
 
-## 🚨 Problem
+### 🤗 [Model on HuggingFace](https://huggingface.co/lakinekaki/all-MiniLM-L6-v2-genbais) · 🌐 [Website](https://genbais.com) · 📄 [Paper](https://genbais.com/static/genbais_paper.pdf) · 💼 [Services](https://genbais.com/consulting)
 
-Current AI bias detection methods rely on artificial academic tests that don't reflect real-world usage. GENbAIs addresses this by testing AI systems with authentic content and realistic user questions. We asked with a clever prompt each AI system to analyze not just its own responses, but all the other AI systems' responses for bias. This cross-checking reveals patterns that single evaluations miss.
+---
 
-## 📈 Current Research Scale
+## 📊 Benchmark Results
+
+**all-MiniLM-L6-v2 + GENbAIs Bio Adapters** vs baseline sentence-transformers/all-MiniLM-L6-v2:
+
+| | Value |
+|---|---|
+| **Average improvement** | +0.0205 (absolute, across 20 metrics) |
+| **Win rate** | 85% — 17 wins / 3 losses |
+| **Best single gain** | +14.66% (PAWS adversarial paraphrase) |
+| **Experiments run** | ~1,000 out of 10²² possible configurations |
+
+### Semantic Textual Similarity
+
+| Dataset | Baseline | Enhanced | Δ% |
+|---------|----------|----------|----|
+| stsb | 0.8203 | 0.8524 | **+3.91%** |
+| sts13 | 0.8060 | 0.8602 | **+6.72%** |
+| sts14 | 0.7559 | 0.8311 | **+9.95%** |
+| sts16 | 0.7899 | 0.8174 | +3.48% |
+
+### Pair Classification
+
+| Dataset | Metric | Baseline | Enhanced | Δ% |
+|---------|--------|----------|----------|----|
+| **paws** | **ap** | **0.5844** | **0.6701** | **+14.66%** |
+| paws | f1 | 0.6140 | 0.6495 | +5.79% |
+| mnli | ap | 0.6070 | 0.6415 | +5.68% |
+| mrpc | ap | 0.8369 | 0.8586 | +2.59% |
+
+### Clustering
+
+| Dataset | Baseline | Enhanced | Δ% |
+|---------|----------|----------|----|
+| twentynewsgroups | 0.4894 | 0.5053 | **+3.24%** |
+
+> Full results with all 20 metrics at [genbais.com](https://genbais.com/#benchmarks)
+
+---
+
+## 🧬 How It Works
+
+### 1. Bio-Feature Library (50+ mechanisms)
+Lightweight adapter modules inspired by neuroscience — predictive coding, lateral inhibition, Hebbian learning, dendritic computation, homeostatic scaling, and more. Each adds up to ~1% of model parameters.
+
+### 2. Intelligent Search (Thompson Sampling)
+The configuration space is ~10²² possibilities. We use Thompson sampling with Bayesian pruning to find optimal combinations in ~1,000 experiments — exploring 0.00000000000000001% of the space.
+
+### 3. Stacked on Best LoRA
+Bio adapters are stacked on top of the optimal LoRA configuration, proving they provide **additive improvement beyond state-of-the-art PEFT**.
+
+### 4. Distillation
+The enhanced model is distilled into a clean SentenceTransformer — **no custom code needed to load**:
+
+```python
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("lakinekaki/all-MiniLM-L6-v2-genbais")
+embeddings = model.encode(["Hello world", "Bio-inspired AI enhancement"])
+```
+
+---
+
+## 🔑 Key Insights
+
+- **🪨 Hard-mode validation**: all-MiniLM-L6-v2 is a 22M-param, 6-layer model already distilled and heavily optimized by the sentence-transformers team — one of the toughest targets to improve. Larger models (CLIP, LLaMA, Mistral) with more layers and parameters offer significantly more room for bio-adapter gains.
+- **Adversarial robustness**: Largest gains on PAWS (+14.7%) — bio features capture semantic structure beyond lexical overlap
+- **Broad improvement**: Gains across STS, pair classification, AND clustering — not task-specific overfitting
+- **Additive over LoRA**: Bio mechanisms find optimization directions that standard PEFT misses
+- **Efficient exploration**: ~1,000 experiments find configurations beating LoRA out of 10²² possible
+
+---
+
+## 💰 Enhancement Services
+
+We enhance your models with pay-for-results pricing. No improvement = no payment.
+
+- **PoC**: $15K–$30K, 3–5 days, refund if <3% improvement
+- **Full enhancement**: Pay-for-results, 1–2 weeks
+- **Interactive calculator**: [genbais.com/#pricing](https://genbais.com/#pricing)
+
+📧 [lazar.kovacevic@yahoo.com](mailto:lazar.kovacevic@yahoo.com)
+
+---
+
+## 🔍 Supporting Research: AI Bias Detection
+
+GENbAIs bio-adapter enhancement is built on systematic AI bias research. By understanding how AI systems exhibit cognitive biases, we design better mechanisms to correct them.
+
+### UPDATE: [genbais.com](https://genbais.com/) has been removed from Google index — apparently they do not like their biases exposed!
+
+### Research Scale
 - **8 Models Tested** across major AI companies
 - **2,960 Responses Analyzed** with systematic evaluation
-- **100 Bias Types Detected** across political, cultural, and cognitive dimensions
 - **5,807 Bias Instances Found** in real-world scenarios
 - **6 Cognitive Dimensions** measured for psychological profiling
 
-<img width="829" height="663" alt="image_14_psychology_profiles" src="https://github.com/user-attachments/assets/ce6e082e-d142-4d34-89e5-bb4b7038929a" />
-
-## 🔬 Methodology
-
-### Real-World Content Collection
-- Authentic news articles from diverse global sources
-- Multiple political perspectives (left, center, right)
-- Various regions and topics
-
-### Realistic Question Generation
-AI-generated questions that mirror actual user behavior:
-```
-"What were the main problems with this policy?"
-"Who was most affected by this event?"
-"What should be done about this situation?"
-```
-
-### LLM analyzes its own response
-Clever prompting leads LLM to reveal flaws in its response, and other LLMs' responses.
-
-### Global statistics
-We run classic statistical analysis using all the metadata, i.e. geography, political leaning, topic
-
-### Six-Dimensional Psychological Assessment
-Each model receives scores (0-100) across:
-- **Self-Awareness**: Recognizing own biases and limitations
-- **Objectivity**: Applying uniform standards consistently  
-- **Detection**: Capability to identify bias in others
-- **Self-Application**: Holding oneself to same standards
-- **Consistency**: Reliability across similar scenarios
-- **Bias Resistance**: Avoiding cognitive biases in analysis
-
-## 📊 Key Findings
-
-### Model Performance Rankings
+### Model Bias Rankings
 | Model | Bias Score | Psych Avg | Profile |
 |-------|------------|-----------|---------|
-| **🤖 Google Gemini 2.5 Flash** | 4.2 | 73.8 | Best overall balance |
-| **🧠 OpenAI O3-mini** | 4.1 | 45.7 | Low bias, poor psychology |
-| **🦙 Meta Llama 3.3 70B** | 5.0 | 67.8 | Most consistent across metrics |
-| **🎨 Claude Sonnet 4** | 6.0 | 50.0 | Perfect self-application, terrible self-awareness |
-| **🐉 Qwen QwQ-32B** | 6.3 | 34.8 | Most problematic overall |
+| Google Gemini 2.5 Flash | 4.2 | 73.8 | Best overall balance |
+| OpenAI O3-mini | 4.1 | 45.7 | Low bias, poor psychology |
+| Meta Llama 3.3 70B | 5.0 | 67.8 | Most consistent |
+| Claude Sonnet 4 | 6.0 | 50.0 | Perfect self-application, terrible self-awareness |
+| Qwen QwQ-32B | 6.3 | 34.8 | Most problematic |
 
-### Critical Insights
-- **Universal Bias**: All models inject bias, even with neutral content
-- **Paradox Models**: Low bias ≠ good cognitive abilities (see O3-mini vs DeepSeek)
-- **Corporate Signatures**: Each company's training creates distinct bias patterns
-- **Measurement Complexity**: Simple bias scores hide important cognitive differences
+### Methodology
+- Real-world news articles across political perspectives and regions
+- Realistic user questions (not artificial benchmarks)
+- Cross-model evaluation — each AI analyzes all others' responses
+- Six-dimensional cognitive profiling
 
-## 🖼️ Examples Gallery
+> Full bias results: [genbais.com/examples](https://genbais.com/examples/)
 
-### Bias Detection Examples
-[Cross-model analysis examples](https://genbais.com/examples/)
+### Also see: [Frac⛏️ure](https://github.com/beviah/fracture) — AI stress testing framework
 
-### Cross-System Comparisons  
-*Coming soon: Comparative analysis charts and heatmaps*
+---
 
-### Current Limitations
-Our research revealed several critical measurement issues requiring refinement:
-
-### Research-Driven Improvements Needed
-- **Self-Application Redesign**: This attribute needs most fixing
-- **Formula refinements**: Going from crude weights to more intelligent relationships
-- **Paradox Resolution**: Address inverse bias-psychology relationships
-- **Attribute validation**: Run artificial tests to validate full radar chart can be covered with different scenarios
-- **Expanding sources**: Increase number of topics, models, and items analyzed
-  
 ## 🤝 Contributing
 
-We welcome contributions to improve bias detection methodologies:
+- [Discussion: bias formulas and cognitive attributes](https://github.com/beviah/GENbAIs/wiki/Bias-Cognition-Capabilities-%E2%80%90-Discussion-about-definitions-and-formulas)
+- [LLM introspection prompt gallery](https://github.com/beviah/GENbAIs/wiki/LLM-introspection-PROMPT-gallery)
 
-- [Join the discussion about formulas and cognitive attributes. ](https://github.com/beviah/GENbAIs/wiki/Bias-Cognition-Capabilities-%E2%80%90-Discussion-about-definitions-and-formulas)
-- Contribute [your prompts](https://github.com/beviah/GENbAIs/wiki/LLM-introspection-PROMPT-gallery) that were successful in LLM introspective analysis
-- or start another topic in the wiki
+## 📖 Links
 
-## 📖 Documentation
+- 🤗 [HuggingFace Model](https://huggingface.co/lakinekaki/all-MiniLM-L6-v2-genbais)
+- 🌐 [Website & Benchmarks](https://genbais.com)
+- 📄 [Research Paper](https://genbais.com/static/genbais_paper.pdf)
+- 💼 [Enhancement Services](https://genbais.com/consulting)
+- 📧 [Contact](mailto:lazar.kovacevic@yahoo.com)
 
-- [Research Paper](https://genbais.com/static/genbais_paper.pdf)
-- [Generative Bias website](https://genbais.com)
+## License
+
+MIT
