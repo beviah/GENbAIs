@@ -80,19 +80,7 @@ embeddings = model.encode(["Hello world", "Bio-inspired AI enhancement"])
 
 ---
 
-## 💰 Enhancement Services
-
-We enhance your models with pay-for-results pricing. No improvement = no payment.
-
-- **PoC**: $15K–$30K, 3–5 days, refund if <3% improvement
-- **Full enhancement**: Pay-for-results, 1–2 weeks
-- **Interactive calculator**: [genbais.com/#pricing](https://genbais.com/#pricing)
-
-📧 [lazar.kovacevic@yahoo.com](mailto:lazar.kovacevic@yahoo.com)
-
----
-
-## 🔍 Supporting Research: AI Bias Detection
+## 🔍 Related Research: AI Bias Detection
 
 GENbAIs bio-adapter enhancement is built on systematic AI bias research. By understanding how AI systems exhibit cognitive biases, we design better mechanisms to correct them.
 
