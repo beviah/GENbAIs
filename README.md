@@ -1,4 +1,4 @@
-# [GENbAIs](https://genbais.com/) — Bio-Inspired Adapters That Beat LoRA
+# [GENbAIs](https://genbais.com/) — Bio-Inspired Adapters: Improving Models Beyond LoRA Fine-Tuning
 
 **General Efficient Neural bio-Adapter Intelligent Search**
 
@@ -76,7 +76,7 @@ embeddings = model.encode(["Hello world", "Bio-inspired AI enhancement"])
 - **Adversarial robustness**: Largest gains on PAWS (+14.7%) — bio features capture semantic structure beyond lexical overlap
 - **Broad improvement**: Gains across STS, pair classification, AND clustering — not task-specific overfitting
 - **Additive over LoRA**: Bio mechanisms find optimization directions that standard PEFT misses
-- **Efficient exploration**: ~1,000 experiments find configurations beating LoRA out of 10²² possible
+- **Efficient exploration**: ~1,000 experiments find performing configurations surpassing LoRA out of 10²² possible
 
 ---
 
