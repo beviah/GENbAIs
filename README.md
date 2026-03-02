@@ -86,11 +86,14 @@ GENbAIs bio-adapter enhancement is built on systematic AI bias research. By unde
 
 ### UPDATE: [genbais.com](https://genbais.com/) has been removed from Google index — apparently they do not like their biases exposed!
 
-### Research Scale
+## 📈 Current Research Scale
 - **8 Models Tested** across major AI companies
 - **2,960 Responses Analyzed** with systematic evaluation
+- **100 Bias Types Detected** across political, cultural, and cognitive dimensions
 - **5,807 Bias Instances Found** in real-world scenarios
 - **6 Cognitive Dimensions** measured for psychological profiling
+
+<img width="829" height="663" alt="image_14_psychology_profiles" src="https://github.com/user-attachments/assets/ce6e082e-d142-4d34-89e5-bb4b7038929a" />
 
 ### Model Bias Rankings
 | Model | Bias Score | Psych Avg | Profile |
