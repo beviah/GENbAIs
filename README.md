@@ -84,8 +84,6 @@ embeddings = model.encode(["Hello world", "Bio-inspired AI enhancement"])
 
 GENbAIs bio-adapter enhancement is built on systematic AI bias research. By understanding how AI systems exhibit cognitive biases, we design better mechanisms to correct them.
 
-### UPDATE: [genbais.com](https://genbais.com/) has been removed from Google index — apparently they do not like their biases exposed!
-
 ## 📈 Current Research Scale
 - **8 Models Tested** across major AI companies
 - **2,960 Responses Analyzed** with systematic evaluation
